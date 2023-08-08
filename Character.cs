@@ -1,13 +1,15 @@
+
+
 public class Character
 {
-    public Character(string name, string rol, string weapon, int armor)
+    public Character(string name, string rol, string weapon, int armor, int level)
     {
         Name = name;
         Weapon = weapon;
         Rol = rol;
         Armor = armor;
         Power = GetPower(weapon, rol);
-        Health = GetHealth(50, armor, rol); // Valor inicial de salud (por ejemplo)
+        Health = GetHealth(level, armor, rol); // Valor inicial de salud (por ejemplo)
         Lifes = 3; // Cantidad inicial de vidas (por ejemplo)
         AreAlive = true; // Establecer inicialmente como vivo
     }
@@ -73,7 +75,30 @@ public class Character
             power +=3;
             if(rol =="Rogue") power +=17;
             break;
+
+            case "nothing":
+                power +=4;
+                break;
         }
         return power;
+    }
+
+    public int Attack(Random accert, Character character)
+    {
+        int successPercentage = accert.Next(0, 100);
+        Console.WriteLine("Atack succesful: %" + successPercentage);
+        if (successPercentage > 0)
+        {
+            character.Power = (int)(character.Power * (1 + successPercentage / 100.0));
+        }
+        return character.Power;
+    }
+
+    public int Deffend(Random accert, Character character)
+    {
+        int successPercentage = accert.Next(30, 100);
+        character.Armor = (int)(character.Armor * (1 + successPercentage / 100.0));
+        Console.WriteLine("Armor eleved: %" + successPercentage);
+        return character.Armor;
     }
 }
