@@ -38,7 +38,7 @@ Welcome to the Console Role-Playing Game. This is a simple text-based game devel
 - You can customize and expand the game by adding new features and mechanics.
 - Have fun playing and facing increasingly challenging encounters!
 
-You can play the game download the .zip @here[https://drive.google.com/file/d/11dsqEN8R2LTikhqxwWFa52uxLxgzJkWM/view?usp=sharing]
+You can play the game download the .zip here(https://drive.google.com/file/d/11dsqEN8R2LTikhqxwWFa52uxLxgzJkWM/view?usp=sharing)
 
 ## Credits
 
